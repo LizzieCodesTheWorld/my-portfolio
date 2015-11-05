@@ -1,14 +1,17 @@
 ul.menu {
 	margin: 0;
 	padding: 0;
+	background: rgba(255,255,255,0.4);
 	li {
 		display: inline;
 		margin-right: 10px;
 		a {
 			color: #333;
 			padding: 10px;
-			background: #333;
-			color: white;
+			font-size:2rem;
+			text-transform: lowercase;
+			// background: #333;
+			// color: white;
 		}
 	}
 }

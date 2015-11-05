@@ -14,17 +14,17 @@
 @import 'comments';
 @import 'footer';
 /*
+
 ====================================
 Default Styling
 ====================================
 */
+body {
+	max-width: 1366px;
+}
 
 img {
 	max-width: 100%;
-}
-
-body {
-	color: #333;
 }
 
 .container {
@@ -32,18 +32,60 @@ body {
 	margin: 0 auto;
 }
 
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+.main {
+	width: 80%;
+	margin:0 auto;
 }
 
 .full {
 	width: 100%;
 }
 
+section.about {
+	display:flex;
+	flex-direction:row;
+	flex-wrap: no-wrap;
+	p {
+		width:60%;
+		text-align: left;
 
+	}
+	h4 {
+		width:20%;
+		margin: 0 2.55% 0 15%;
+		padding-right:2.5%;
+		text-align: right;
+		border-right: 4px solid black;
+	}
+}
 
+// Header	
+
+.heroImage {
+	height:100vh;
+	background-size:cover;
+}
+
+.heroText {
+	padding-top: 22%;
+	padding-right:10%;
+}
+
+.skillIcons {
+	display:flex;
+	flex-direction:column;
+	flex-wrap:no-wrap;
+	text-align:center;
+	color: white;
+	background: #324651;
+	margin-top:20px;
+}
+
+.skillIconSection {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:no-wrap;
+}
 
 
 

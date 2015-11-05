@@ -1,5 +1,42 @@
+// HEADINGS + LINKS: font-family: 'Sorts Mill Goudy', serif;
+
+// BODY: font-family: 'Quicksand', sans-serif;
+
+// H1: font-family: 'Abril Fatface', cursive;
+
+// font-family: 'Forum', cursive;
+
+// font-family: 'Montez', cursive;
+
+
+
+h1 {
+	font-family: 'Abril Fatface', cursive;
+	// font-family: 'Sorts Mill Goudy', serif;
+	font-size: 5rem;
+	border-right:10px solid black;
+	text-align:right;
+	padding-right: 4vh;
+	margin:0;
+}
+
+h2, h3{
+	border-left:10px solid black;
+	padding-left:4vh;
+}
+
+h4 {
+	font-family: 'Sorts Mill Goudy', serif;
+	font-size:4rem;
+}
+
+// LINKS
+
 a {
 	color: #BA209B;
+	// font-family: 'Quicksand', sans-serif;
+	font-family: 'Sorts Mill Goudy', serif;
+	font-weight: bold;
 	text-decoration: none;
 	&:hover {
 		color: #D424B1;
@@ -10,7 +47,18 @@ a {
 
 p {
 	line-height: 1.5;
+	font-family: 'Quicksand', sans-serif;
 }
+
+.devicons, .fa {
+	font-size:6rem;
+	margin-left:20px;
+}
+.mainSubheading {
+		text-align: right;
+		width:40%;
+		margin-left:57.5%;
+	}
 
 /*blockquotes*/
 
