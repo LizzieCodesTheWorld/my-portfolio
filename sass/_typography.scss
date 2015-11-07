@@ -13,11 +13,12 @@
 h1 {
 	font-family: 'Abril Fatface', cursive;
 	// font-family: 'Sorts Mill Goudy', serif;
-	font-size: 5rem;
+	font-size: 4rem;
 	border-right:10px solid black;
 	text-align:right;
-	padding-right: 4vh;
-	margin:0;
+	padding-right: 5vh;
+	margin:10vh 0 0 0;
+	color:black;
 }
 
 h2, h3{
@@ -27,16 +28,38 @@ h2, h3{
 
 h4 {
 	font-family: 'Sorts Mill Goudy', serif;
-	font-size:4rem;
+	font-size:3rem;
+}
+
+h5 {
+	font-family: 'Sorts Mill Goudy', serif;
+	font-size:1.5rem;
+	// text-align:center;
+}
+
+.skills h2, .skills h3, .skills h4 {
+	border-left:5px solid white;
+	text-align:right;
+	padding-bottom: 16vh;
+    padding-left: 2.5%;
+
+}
+
+.skillsHeading p {
+	padding-top: 10vh;
+	padding-right:2.5%;
+	width: 60%;
+	text-align:left;
 }
 
 // LINKS
 
 a {
 	color: #BA209B;
-	// font-family: 'Quicksand', sans-serif;
-	font-family: 'Sorts Mill Goudy', serif;
-	font-weight: bold;
+	font-family: 'Quicksand', sans-serif;
+	// font-family: 'Sorts Mill Goudy', serif;
+	// font-weight: bold;
+	letter-spacing: -0.1rem;
 	text-decoration: none;
 	&:hover {
 		color: #D424B1;
@@ -48,16 +71,17 @@ a {
 p {
 	line-height: 1.5;
 	font-family: 'Quicksand', sans-serif;
+	font-size:1.1rem;
 }
 
 .devicons, .fa {
-	font-size:6rem;
+	font-size:3rem;
 	margin-left:20px;
 }
 .mainSubheading {
 		text-align: right;
-		width:40%;
-		margin-left:57.5%;
+		width:35%;
+		margin-left:60%;
 	}
 
 /*blockquotes*/

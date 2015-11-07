@@ -19,7 +19,7 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="container">
+  <div class="main">
 
     <?php wp_nav_menu( array(
       'container' => false,

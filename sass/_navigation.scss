@@ -1,17 +1,15 @@
 ul.menu {
 	margin: 0;
-	padding: 0;
-	background: rgba(255,255,255,0.4);
+	padding: 5vh;
+	text-align:right;
 	li {
 		display: inline;
-		margin-right: 10px;
+		padding:10px;
+		margin-top: 3vh;
 		a {
 			color: #333;
-			padding: 10px;
-			font-size:2rem;
-			text-transform: lowercase;
-			// background: #333;
-			// color: white;
+			font-size:1.3rem;
+			text-transform: uppercase;
 		}
 	}
 }

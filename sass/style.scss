@@ -1,10 +1,10 @@
 /*
-* Theme Name: HackerYou Starter Theme
-* Theme URI: http://hackeryou.com;
-* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Theme Name: Lizzie PainterPortfolio Theme
+* Theme URI: http://lizziecodes.com
+* Description: Portfolio theme for Lizzie Painter 
 * Version: 1.0
-* Author: HackerYou
-* Author URI: http://hackeryou.com
+* Author: Lizzie Painter
+* Author URI: http://lizziecodes.com
 */
 
 @import 'normalize';
@@ -27,39 +27,14 @@ img {
 	max-width: 100%;
 }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
 .main {
-	width: 80%;
+	width: 85%;
 	margin:0 auto;
 }
 
-.full {
-	width: 100%;
-}
+// ----------END: DEFAULT ------------------
 
-section.about {
-	display:flex;
-	flex-direction:row;
-	flex-wrap: no-wrap;
-	p {
-		width:60%;
-		text-align: left;
-
-	}
-	h4 {
-		width:20%;
-		margin: 0 2.55% 0 15%;
-		padding-right:2.5%;
-		text-align: right;
-		border-right: 4px solid black;
-	}
-}
-
-// Header	
+// ----------HERO SECTION ---------------------
 
 .heroImage {
 	height:100vh;
@@ -67,9 +42,52 @@ section.about {
 }
 
 .heroText {
-	padding-top: 22%;
-	padding-right:10%;
+	padding-top: 15%;
 }
+
+// ----------END: HERO------------------
+
+// ----------ABOUT SECTION ---------------------
+
+section.about {
+	display:flex;
+	flex-direction:row;
+	flex-wrap: no-wrap;
+	padding:22vh 0;
+	position:relative;
+	p {
+		width:60%;
+		text-align: left;
+
+	}
+	h4 {
+		width:20%;
+		line-height: 3.7rem;
+		margin: 0 2.55% 0 2%;
+		padding-right:2.5%;
+		text-align: right;
+		border-right: 4px solid black;
+	}
+	.headshot {
+		width:100%;
+	}
+
+	// .gold {
+	// 	position:absolute;
+	// 	top:-20px;
+	// 	left:-20px;
+	// }
+}
+
+
+.heroImage:hover.desaturate { 
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+}
+
+// ----------END: ABOUT SECTION ------------------
+
+// ----------SKILLS SECTION ---------------------
 
 .skillIcons {
 	display:flex;
@@ -77,17 +95,110 @@ section.about {
 	flex-wrap:no-wrap;
 	text-align:center;
 	color: white;
-	background: #324651;
+	// background: #324651;
 	margin-top:20px;
+}
+
+.skillIconFlex{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:no-wrap;
+	text-align:center;
+	justify-content:center;
+	border-left: 4px solid white;
 }
 
 .skillIconSection {
 	display:flex;
 	flex-direction:row;
 	flex-wrap:no-wrap;
+	text-align:center;
+	justify-content:center;
 }
 
+section.skills {
+	background: #324651;
+	color:white;
+	width:100%;
+	padding-bottom:5vh;
+}
 
+.skills {
+	position:relative;
+}
 
+.skills:before {
+  content: '';
+  position: absolute;
+  top: -36px;
+  width: 100%;
+  height: 80px;
+  background: #324651;
+  -webkit-transform: skewY(2.5deg);
+  -moz-transform: skewY(2.5deg);
+  -ms-transform: skewY(2.5deg);
+  -o-transform: skewY(2.5deg);
+  transform: skewY(-3deg);
+  -webkit-backface-visibility: hidden;
+}
 
+.skillsHeading {
+	display:flex;
+	flex-direction:row-reverse;
+	flex-wrap:no-wrap;
+}
+
+// ----------END: SKILL SECTION ------------------
+
+// ----------PORTFOLIO SECTION ---------------------
+
+.portfolioFlex {
+	display:flex;
+	flex-direction:column;
+	flex-wrap:no-wrap;
+}
+.portfolioItem {
+	display: flex;
+	flex-direction: row;
+}
+
+// ----------END: PORTFOLIO SECTION ------------------
+
+// ----------CONTACT SECTION ---------------------
+
+.contactSection {
+	background:#808182;
+	color:white;
+	padding: 10vh 0;
+}
+
+.contact {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:no-wrap;
+	background:#808182;
+	color:white;
+}
+
+.contactHeader {
+	text-align: center;
+	padding-bottom:10vh;
+	h4 {
+		margin:0;
+	}
+}
+
+.contactLeft {
+	width:60%;
+}
+
+.contactForm {
+	width:40%;
+}
+.contactLeft, .contactForm {
+	display:flex;
+	flex-direction:column;
+	flex-wrap:no-wrap;
+	text-align:left;
+}
 
