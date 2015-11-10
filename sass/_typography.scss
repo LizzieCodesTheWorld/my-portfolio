@@ -11,9 +11,9 @@
 
 
 h1 {
-	font-family: 'Abril Fatface', cursive;
-	// font-family: 'Sorts Mill Goudy', serif;
-	font-size: 4rem;
+	// font-family: 'Abril Fatface', cursive;
+	font-family: 'Sorts Mill Goudy', serif;
+	font-size: 5rem;
 	border-right:10px solid black;
 	text-align:right;
 	padding-right: 5vh;
@@ -22,7 +22,7 @@ h1 {
 }
 
 h2, h3{
-	border-left:10px solid black;
+	// border-left:10px solid black;
 	padding-left:4vh;
 }
 
@@ -76,8 +76,9 @@ p {
 
 .devicons, .fa {
 	font-size:3rem;
-	margin-left:20px;
+	padding-right:20px;
 }
+
 .mainSubheading {
 		text-align: right;
 		width:35%;
@@ -120,9 +121,7 @@ dd {
 
 /*lists*/
 
-ul li, ol li {
-	padding: 3px;
-}
+
 
 /*PRE*/
 

@@ -32,10 +32,36 @@ img {
 	margin:0 auto;
 }
 
+li {
+	list-style:none;
+	padding:0;
+}
 // ----------END: DEFAULT ------------------
+
+// ----------NAV SECTION ---------------------
+
+nav {
+	position:fixed;
+	z-index:9999;
+	width:100%;
+	.navA {
+		padding-right:5%;
+	}
+}
+
+.navBackground {
+	background: rgba(255,255,255, 0.8);
+}
+
+// ----------END: NAV ------------------
 
 // ----------HERO SECTION ---------------------
 
+ul.main.menu {
+	padding:0;
+}
+
+// hero Image from unsplash.com
 .heroImage {
 	height:100vh;
 	background-size:cover;
@@ -44,6 +70,42 @@ img {
 .heroText {
 	padding-top: 15%;
 }
+
+// snow animation by @dis-play
+.snow{
+	background: none;
+	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:9999;
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}	
 
 // ----------END: HERO------------------
 
@@ -54,7 +116,6 @@ section.about {
 	flex-direction:row;
 	flex-wrap: no-wrap;
 	padding:22vh 0;
-	position:relative;
 	p {
 		width:60%;
 		text-align: left;
@@ -69,16 +130,21 @@ section.about {
 		border-right: 4px solid black;
 	}
 	.headshot {
-		width:100%;
+		width:41%;
+		position:relative;
+		img {
+			z-index:9999;
+		}
+		.headShotGold img{
+			position:absolute;
+			left:-18px;
+			bottom:-18px;
+			width:100%;
+			height:100%;
+			z-index:-1;
+		}
 	}
-
-	// .gold {
-	// 	position:absolute;
-	// 	top:-20px;
-	// 	left:-20px;
-	// }
 }
-
 
 .heroImage:hover.desaturate { 
 -webkit-filter: grayscale(100%);
@@ -95,8 +161,7 @@ filter: grayscale(100%);
 	flex-wrap:no-wrap;
 	text-align:center;
 	color: white;
-	// background: #324651;
-	margin-top:20px;
+	margin-top:8vh;
 }
 
 .skillIconFlex{
@@ -106,6 +171,7 @@ filter: grayscale(100%);
 	text-align:center;
 	justify-content:center;
 	border-left: 4px solid white;
+	padding-left:2.5%;
 }
 
 .skillIconSection {
@@ -116,15 +182,17 @@ filter: grayscale(100%);
 	justify-content:center;
 }
 
-section.skills {
+.skills {
+	position:relative;
 	background: #324651;
 	color:white;
 	width:100%;
-	padding-bottom:5vh;
-}
-
-.skills {
-	position:relative;
+	padding-bottom:10vh;
+	h5 {
+		width: 24%;
+		text-align: right;
+		padding-right: 2.5%;
+	}
 }
 
 .skills:before {
@@ -142,6 +210,21 @@ section.skills {
   -webkit-backface-visibility: hidden;
 }
 
+.skills:after {
+  content: '';
+  position: absolute;
+  bottom: -36px;
+  width: 100%;
+  height: 80px;
+  background: #324651;
+  -webkit-transform: skewY(2.5deg);
+  -moz-transform: skewY(2.5deg);
+  -ms-transform: skewY(2.5deg);
+  -o-transform: skewY(2.5deg);
+  transform: skewY(3deg);
+  -webkit-backface-visibility: hidden;
+}
+
 .skillsHeading {
 	display:flex;
 	flex-direction:row-reverse;
@@ -156,49 +239,240 @@ section.skills {
 	display:flex;
 	flex-direction:column;
 	flex-wrap:no-wrap;
+
 }
 .portfolioItem {
 	display: flex;
 	flex-direction: row;
+	margin-top:5%;
+	position:relative;
+	:nth-child(even) {
+    flex-direction:row-reverse; 
+	}	
+}
+
+.portfolioImage {
+	z-index:1;
+	position:relative;
+}
+
+.gold img{
+	position:absolute;
+	top:20px;
+	left:-20px;
+	width:100%;
+	height:100%;
+	z-index:-1;
+}
+
+.portfolio {
+	width:100%;
+	padding: 10vh 0;
+	h2 {
+		border-right: 5px solid black;
+		border-left: none;
+		text-align: left;
+		padding-bottom: 16vh;
+		padding-left: 2.5%;
+		font-family: 'Sorts Mill Goudy', serif;
+		font-size:3rem;
+		margin: 5vh 70% 0 0;
+	}
+	h3 {
+		font-family: 'Sorts Mill Goudy', serif;
+		border:0px;
+		padding:0;
+		font-size: 1.5rem;
+	}
+	h4 {
+		font-size: 1.2rem;
+	}
+	img {
+		width:65%;
+	}
+	.portfolioText {
+		z-index:2;
+		background: rgba(239, 239, 239, 0.7);
+		margin-top: 4.5vh;
+		width: 50%;
+		padding: 2.5% 5% 5% 5%;
+		height:90%;
+		position:absolute;
+		right:5%;
+		ul {
+			position:absolute;
+			right:-15%;
+			top:5vh;
+			li {
+				border: 2px solid black;
+				background: white;
+				width: 100px;
+				padding:10px;
+				margin: 20px;
+			}
+		}
+		a {
+			border:2px solid black;
+			padding: 10px;
+			margin-top: 5vh;
+			font-family: 'Sorts Mill Goudy', serif;
+			text-decoration:none;
+			color:black;
+			font-size: 1.2rem;
+			background:white;
+			:hover {
+				background: #808182;
+			}
+		}
+		p {
+			margin-bottom: 40px;
+		}
+	}
 }
 
 // ----------END: PORTFOLIO SECTION ------------------
 
 // ----------CONTACT SECTION ---------------------
 
+
+.contactHeader {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:no-wrap;
+	font-family: 'Sorts Mill Goudy', serif;
+	font-size: 1.5rem;
+	border:0;
+	margin-bottom:10vh;
+	h2 {
+		text-align: right;
+		padding-right:10.5%;
+		padding-top:2vh;
+	}
+}
+
+.resume {
+	border: 2px solid white;
+	display:block;
+	padding:5%;
+	margin-top:12.5vh;
+	font-size:1.2rem;
+	text-align:center;
+}
+
 .contactSection {
 	background:#808182;
 	color:white;
-	padding: 10vh 0;
+	padding: 0vh 0 10vh 0;
+}
+
+.contactSection:before {
+  content: '';
+  position: absolute;
+  top: -36px;
+  width: 100%;
+  height: 80px;
+  -webkit-transform: skewY(2.5deg);
+  -moz-transform: skewY(2.5deg);
+  -ms-transform: skewY(2.5deg);
+  -o-transform: skewY(2.5deg);
+  transform: skewY(3deg);
+  -webkit-backface-visibility: hidden;
 }
 
 .contact {
 	display:flex;
 	flex-direction:row;
 	flex-wrap:no-wrap;
+	justify-content: space-around;
 	background:#808182;
 	color:white;
 }
 
 .contactHeader {
-	text-align: center;
-	padding-bottom:10vh;
+	text-align: left;
 	h4 {
 		margin:0;
+		font-size: 1.8rem; 
 	}
 }
 
+.contactSubheader {
+	margin-top:10vh;
+	width:70%;
+	padding-left:2.5%;
+	border-left:4px solid white;
+}
+
 .contactLeft {
-	width:60%;
+	width:45%;
+	padding:0 2.5% 2.5% 2.5%;
+	margin-right:10%;
+	text-align:right;
+	span {
+		font-weight:bold;
+	}
+	h2 {
+		font-family: 'Sorts Mill Goudy', serif;
+		font-size: 1.7rem;
+		padding-left:0;
+		border-bottom:2px solid white;
+	}
+	h5 {
+		font-family: 'Quicksand', sans-serif;
+		font-weight:normal;
+		font-size: 1.4rem;
+	}
+}
+
+.emailCall a{
+	color:white;
+	padding-left:0;
 }
 
 .contactForm {
 	width:40%;
+	h2 {
+		font-family: 'Sorts Mill Goudy', serif;
+		font-size: 1.7rem;
+		padding-left:0;
+		border-bottom:2px solid white;
+	}
 }
+
 .contactLeft, .contactForm {
 	display:flex;
 	flex-direction:column;
 	flex-wrap:no-wrap;
 	text-align:left;
 }
+
+input[type=text] {
+	border:none;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 1.4rem;
+	width:100%;
+	margin-bottom:2.5%;
+	padding: 10px 0;
+	border: 3px solid white;
+	background:none;
+}
+
+input[type=submit] {
+	padding:10px;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.4rem;
+	margin-top:3vh;
+	width:200px;
+	border: 3px solid white;
+	background:white;
+}
+
+textarea {
+	width:100%;
+	font-family: 'Sorts Mill Goudy', serif;
+	font-size: 1.4rem;
+	border: 3px solid white;
+	background:none;
+}
+
 
