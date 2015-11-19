@@ -1,9 +1,4 @@
-$(function(){
 
-	console.log("It's working");
-	$('.menu a').smoothScroll();
-
-});
 
 $(function() {
     //caches a jQuery object containing the header element
@@ -16,5 +11,18 @@ $(function() {
         } else {
             header.removeClass("navBackground");
         }
+    });
+
+    $('.menu a').smoothScroll();
+
+
+    $(".fa-bars").on("click", function (){
+        $(".navAMobile").css("display","block");
+
+        $(".fa-bars").hide();
+    });
+    $(".navAMobile").on("click", function (){
+        $(".navAMobile").css("display","none");
+        $(".fa-bars").fadeIn();
     });
 });
